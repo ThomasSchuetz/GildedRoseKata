@@ -9,6 +9,7 @@
                 "Aged Brie" => new AgedBrie(item),
                 "Sulfuras, Hand of Ragnaros" => new Sulfuras(item),
                 "Backstage passes to a TAFKAL80ETC concert" => new BackstagePass(item),
+                "Conjured Mana Cake" => new Conjured(item),
                 _ => new RegularItem(item),
             };
         }
