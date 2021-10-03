@@ -22,7 +22,7 @@ namespace GildedRoseTests
          public void Item_unit_tests(string name, int sellIn, int quality, int sellInExpected, int qualityExpected)
          {
              var items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
-             var app = new GildedRoseKata.GildedRose(items);
+             var app = new GildedRose.GildedRose(items);
              app.UpdateQuality();
              Assert.Equal(qualityExpected, items[0].Quality);
              Assert.Equal(sellInExpected, items[0].SellIn);
@@ -33,7 +33,7 @@ namespace GildedRoseTests
          public void Result_after_1_day()
          {
              var items = GetBasicItems();
-             var app = new GildedRoseKata.GildedRose(items);
+             var app = new GildedRose.GildedRose(items);
        
              var expected = new List<Item>{
                  new Item {Name = "+5 Dexterity Vest", SellIn = 9, Quality = 19},
@@ -71,7 +71,7 @@ namespace GildedRoseTests
          public void Result_after_30_days()
          {
              var items = GetBasicItems();
-             var app = new GildedRoseKata.GildedRose(items);
+             var app = new GildedRose.GildedRose(items);
        
              var expected = new List<Item>{
                  new Item {Name = "+5 Dexterity Vest", SellIn = -20, Quality = 0},
