@@ -9,6 +9,7 @@ namespace GildedRose
             return item.Name switch
             {
                 "Aged Brie" => new AgedBrie(item),
+                "Sulfuras, Hand of Ragnaros" => new Sulfuras(item),
                 _ => throw new NotImplementedException($"Unknown item: {item.Name}"),
             };
         }
