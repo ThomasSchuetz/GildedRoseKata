@@ -1,8 +1,7 @@
-﻿using GildedRose;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace GildedRoseKata
+namespace GildedRose
 {
     public class Program
     {
@@ -34,7 +33,6 @@ namespace GildedRoseKata
                     SellIn = 5,
                     Quality = 49
                 },
-				// this conjured item does not work properly yet
 				new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
             };
 
@@ -47,7 +45,7 @@ namespace GildedRoseKata
                 Console.WriteLine("name, sellIn, quality");
                 for (var j = 0; j < Items.Count; j++)
                 {
-                    System.Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
+                    Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
                 }
                 Console.WriteLine("");
                 app.UpdateQuality();

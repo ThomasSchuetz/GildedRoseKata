@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GildedRose
+﻿namespace GildedRose
 {
     public static class ItemFactory
     {
@@ -9,7 +7,10 @@ namespace GildedRose
             return item.Name switch
             {
                 "Aged Brie" => new AgedBrie(item),
-                _ => throw new NotImplementedException($"Unknown item: {item.Name}"),
+                "Sulfuras, Hand of Ragnaros" => new Sulfuras(item),
+                "Backstage passes to a TAFKAL80ETC concert" => new BackstagePass(item),
+                "Conjured Mana Cake" => new Conjured(item),
+                _ => new RegularItem(item),
             };
         }
     }

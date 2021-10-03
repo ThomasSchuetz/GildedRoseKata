@@ -1,11 +1,10 @@
-﻿using GildedRose;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace GildedRoseKata
+namespace GildedRose
 {
     public class GildedRose
     {
-        IList<Item> Items;
+        private readonly IList<Item> Items;
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
